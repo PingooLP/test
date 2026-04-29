@@ -18,8 +18,8 @@ jobs:
 
       - name: Pull and Save Docker Image
         run: |
-          IMAGE_NAME="swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/vllm/vllm-openai:v0.19.1"
-          FILE_NAME="vllm_v0.19.1.tar"
+          IMAGE_NAME="swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/vllm/vllm-openai:v0.20.0"
+          FILE_NAME="vllm_v0.20.0.tar"
           
           echo "正在拉取镜像..."
           docker pull $IMAGE_NAME
@@ -34,5 +34,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: vllm-image-package
-          path: vllm_v0.19.1.tar.gz
+          path: vllm_v0.20.0.tar.gz
           retention-days: 1 # 下载链接保留1天
